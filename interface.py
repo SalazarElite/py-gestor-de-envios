@@ -37,6 +37,15 @@ class Interface(QMainWindow):
         self.Labels.append([text, self.nextButtonId])
         self.nextLabelId += 1
 
+    def clear_screen(self):
+        for i in range(0, self.nextButtonId):
+            s = f"self.button_{i}.deleteLater()"
+            exec(s)
 
-    def update(self):
+        for i in range(0, self.nextLabelId):
+            s = f"self.label_{i}.deleteLater()"
+            exec(s)
+
+
+    def update_screen(self):
         self.label.adjustSize()

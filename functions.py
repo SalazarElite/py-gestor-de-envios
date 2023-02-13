@@ -1,3 +1,2 @@
-class functions:
-    def __init__(self):
-        self.functionsList = []
+def save_to_file(filename, content):
+    f = open()

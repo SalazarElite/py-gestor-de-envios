@@ -14,7 +14,7 @@ def start():
 def create_window():
     app = QApplication(sys.argv)
     win = Interface()
-    win.addButton("teste", [100, 100], win.clicked_2)
+    win.addButton("limpar tela", [50, 50], win.clear_screen)
     win.addLabel("label automatico", [50, 100])
     win.show()
     sys.exit(app.exec_())
@@ -23,6 +23,7 @@ def create_window():
 if __name__ == "__main__":
     try:
         from interface import Interface
+        from functions import *
         import sys, subprocess, pkg_resources
         verify_libs()
         from PyQt5 import QtWidgets
